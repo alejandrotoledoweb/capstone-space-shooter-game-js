@@ -4,7 +4,10 @@
   "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "start": "webpack serve --open",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -16,5 +19,16 @@
   "bugs": {
     "url": "https://github.com/alejandrotoledoweb/capstone-space-shooter-game-js/issues"
   },
-  "homepage": "https://github.com/alejandrotoledoweb/capstone-space-shooter-game-js#readme"
+  "homepage": "https://github.com/alejandrotoledoweb/capstone-space-shooter-game-js#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "css-loader": "^5.1.1",
+    "csv-loader": "^3.0.3",
+    "style-loader": "^2.0.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2",
+    "xml-loader": "^1.2.1"
+  }
 }
