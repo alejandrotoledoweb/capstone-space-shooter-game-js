@@ -14,7 +14,7 @@ class SceneMainMenu extends Phaser.Scene {
     this.load.audio("sndBtnDown", "content/sndBtnDown.wav");
   }
 
-  create = () => {
+  create() {
     this.scene.start("SceneMain");
   }
 }
