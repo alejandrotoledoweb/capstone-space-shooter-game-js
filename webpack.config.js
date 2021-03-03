@@ -5,7 +5,7 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: {
-    app: './src/index.js',
+    app: './index.js',
     'production-dependencies': ['phaser'],
   },
   output: {
@@ -18,7 +18,6 @@ module.exports = {
     contentBase: './dist',
   },
   module: {
-
     rules: [
       {
         test: /\.js$/,
