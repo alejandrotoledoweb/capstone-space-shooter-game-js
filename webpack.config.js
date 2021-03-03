@@ -4,18 +4,20 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
+  mode: 'development',
   entry: {
     app: './index.js',
     'production-dependencies': ['phaser'],
   },
   output: {
-    filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
+    filename: '[name].js',
   },
   devtool: 'inline-source-map',
-  mode: 'development',
   devServer: {
-    contentBase: './dist',
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    port: 9000,
   },
   module: {
     rules: [
@@ -44,41 +46,11 @@ module.exports = {
         ],
       },
       {
-
-        test: /\.css$/i,
-
-        use: ['style-loader', 'css-loader'],
-
-      },
-      {
-
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-
-        type: 'asset/resource',
-
-      },
-      {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         use: [
           'file-loader',
         ],
       },
-      {
-
-        test: /\.(csv|tsv)$/i,
-
-        use: ['csv-loader'],
-
-      },
-
-      {
-
-        test: /\.xml$/i,
-
-        use: ['xml-loader'],
-
-      },
-
     ],
   },
   plugins: [
