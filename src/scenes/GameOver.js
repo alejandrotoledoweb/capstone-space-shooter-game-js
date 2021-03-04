@@ -1,6 +1,6 @@
 import Phaser from 'phaser';
 import config from '../config/config';
-import ButtonGen from '../object/ButtonGen';
+import ButtonGen from '../objects/ButtonGen';
 import ScrollingBackground from '../objects/ScrollingBackground';
 
 export default class GameOverScene extends Phaser.Scene {
@@ -19,7 +19,7 @@ export default class GameOverScene extends Phaser.Scene {
     this.gameButton = new ButtonGen(this, config.widht / 2, config.height / 2 + 50, 'restartButton', 'restartButtonFocus', 'Game', this.sfx.btnHover, this.sfx.gameStart);
 
     // Setup Options Buttons
-    this.optionsButton = new ButtonGen(this, config.width / 2, config.height /2 + 130, 'opstionsButton', 'optionsButtonFocus', 'Options', this.sfx.btnHover, this.sfx.btnSelect);
+    this.optionsButton = new ButtonGen(this, config.width / 2, config.height / 2 + 130, 'opstionsButton', 'optionsButtonFocus', 'Options', this.sfx.btnHover, this.sfx.btnSelect);
 
     // Setup the Credits Button
     this.mainMenuButton = new ButtonGen(this, config.width / 2, config.height / 3 + 210, 'mainMenuButton', 'mainMenuButtonFocus', 'Game Credits', this.sfx.btnHover, this.sfx.btnSelect);
@@ -34,7 +34,7 @@ export default class GameOverScene extends Phaser.Scene {
     }
 
     this.backgrounds = [];
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 8; i += 1) {
       const keys = ['background0', 'background1', 'background2', 'background3', 'background4', 'background5', 'background6', 'background7'];
       const bg = new ScrollingBackground(this, keys[i], i * 3);
       this.backgrounds.push(bg);
@@ -44,7 +44,7 @@ export default class GameOverScene extends Phaser.Scene {
   }
 
   update() {
-    for (let i = 0; i < this.backgrounds.length; i++) {
+    for (let i = 0; i < this.backgrounds.length; i += 1) {
       this.backgrounds[i].update();
     }
   }
