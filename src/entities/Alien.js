@@ -1,8 +1,8 @@
 import Phaser from 'phaser';
 import Entity from './Entity';
-import UFOLaser from '../weapons/UFOLaser';
+import UFOLaser from '../weapons/AlienLaser';
 
-export default class UFO extends Entity {
+export default class Alien extends Entity {
   constructor(scene, x, y) {
     super(scene, x, y, 'ufo', 'UFO');
     this.body.velocity.y = Phaser.Math.Between(35, 65);

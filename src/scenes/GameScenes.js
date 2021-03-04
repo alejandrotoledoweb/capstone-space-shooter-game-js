@@ -1,6 +1,6 @@
 import Phaser from 'phaser';
 import Player from '../entities/Player';
-import UFO from '../entities/UFO';
+import Alien from '../entities/Alien';
 import Ninja from '../entities/Ninja';
 import Paranoid from '../entities/Paranoid';
 import Saboteur from '../entities/Saboteur';
@@ -33,8 +33,8 @@ export default class GameScene extends Phaser.Scene {
     });
 
     this.anims.create({
-      key: 'ufo',
-      frames: this.anims.generateFrameNumbers('ufo'),
+      key: 'alien',
+      frames: this.anims.generateFrameNumbers('alien'),
       frameRate: 20,
       repeat: -1,
     });
@@ -192,7 +192,7 @@ export default class GameScene extends Phaser.Scene {
               0,
             );
           } else if (Phaser.Math.Between(0, 10) >= 5) {
-            enemy = new UFO(
+            enemy = new Alien(
               this,
               Phaser.Math.Between(0, this.game.config.width),
               0,
@@ -330,7 +330,7 @@ export default class GameScene extends Phaser.Scene {
   increaseScore(enemy) {
     if (enemy.getData('type') === 'Paranoid' || enemy.getData('type') === 'Saboteur') {
       this.sys.game.globals.score += 1;
-    } else if (enemy.getData('type') === 'UFO' || enemy.getData('type') === 'Ninja') {
+    } else if (enemy.getData('type') === 'Alien' || enemy.getData('type') === 'Ninja') {
       this.sys.game.globals.score += 2;
     } else if (enemy.getData('type') === 'Lightning') {
       this.sys.game.globals.score += 4;
