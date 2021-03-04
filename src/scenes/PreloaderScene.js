@@ -114,5 +114,80 @@ export default class PreloaderScene extends Phaser.Scene {
       frameWidth: 96,
       frameheight: 96,
     });
+    this.load.spritesheet('explosion2', './explosions/explosion2.png', {
+      frameWidth: 32,
+      frameHeight: 32,
+    });
+    this.load.spritesheet('explosion3', './explosions/explosion3.png', {
+      frameWidth: 128,
+      frameHeight: 128,
+    });
+    this.load.spritesheet('explosion4', './explosions/explosion4.png', {
+      frameWidth: 256,
+      frameHeight: 256,
+    });
+    this.load.spritesheet('explosion5', './explosions/explosion5.png', {
+      frameWidth: 256,
+      frameHeight: 256,
+    });
+    this.load.spritesheet('explosion6', './explosions/explosion6.png', {
+      frameWidth: 256,
+      frameHeight: 256,
+    });
+
+    // NPC assets
+    this.load.image('startfleetCaptain', './npc/SecurityOfficer.png');
+
+    // Enemies lasers and ships
+    // Ninja Ship
+    this.load.spritesheet('ninja', './ships/Ninja.png', {
+      frameWidth: 32,
+      frameHeight: 32,
+    });
+
+    // Ninja Laser
+    this.load.image('ninjaLaser1', './lasers.blue1.png');
+
+    // UFO ship
+    this.load.spritesheet('ufo', './ships/UFO.png',{
+      frameWidth: 32,
+      frameHeight: 32,
+    });
+
+    // UFO Lasers
+    this.load.image('ufoLasers1', './lasers/red/1.png');
+
+    // Paranoid Ship
+    this.load.spritesheet('paranoid', './ships/Paranoid.png', {
+      frameWidth: 32,
+      frameHeight: 32,
+    });
+    // Paranoid Lasers
+    this.load.image('paranoidLasers5', './lasers/green/5.png');
+
+    // Saboteur Ship
+    this.load.spritesheet('saboteur', './ships/Saboteur.png', {
+      frameWidth: 32,
+      frameHeight: 32,
+    });
+    // Saboteur Lasers
+    this.load.image('saboteurLasers4', './lasers/pink/4.png');
+
+    // Lightning Ship
+    this.load.spritesheet('lightning', './ships/Lightning.png', {
+      frameWidth: 32,
+      frameHeight: 32,
+    });
+    // Lightning Lasers
+    this.load.image('lightningLasers5', './lasers/yellow/5.png');
+
+    // Player Ship
+    this.load.spritesheet('player', './ships/Lighter.png', {
+      frameWidth: 45,
+      frameHeight: 45,
+    });
+
+    // Player lasers
+    this.load.image('playerLaser3', './lasers/turq/3.png');
   }
 }
