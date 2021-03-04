@@ -70,5 +70,34 @@ export default class PreloaderScene extends Phaser.Scene {
       assetText.destroy();
       this.ready();
     });
+
+    this.timeEvent = this.time.delayedCall(5000, this.ready, [], this);
+
+    this.load.crossOrigin = 'Anonymous';
+    this.load.image('titleScreen', './logos/dfdLogo.png');
+    this.load.image('playButton', './ buttonsplayButton.png');
+    this.load.image('PlayButtonsFocus', 'playButtonFocus.png');
+    this.load.image('optionsButton', './buttons/optionsButton.png');
+    this.load.image('optionsButtonFocus', './buttons/optionsButtonFocus.png');
+    this.load.image('creditsButton', './buttons/creditsButton.png');
+    this.load.image('creditsButtonFocus', './buttons/creditsButtonFocus.png');
+    this.load.image('checkbox', './buttons/checkbox.png');
+    this.load.image('checkboxChecked', './buttons/checkboxChecked.png');
+    this.load.image('menuButton', './buttons/menuButton.png');
+    this.load.image('menuButtonFocus', './buttons/menuButtonFocus.png');
+    this.load.image('gameOverTitle', './logos/gameOver.png');
+    this.load.image('restartButton', './buttons/restartButton.png');
+    this.load.image('restartButtonFocus', './buttons/restartButtonFocus.png');
+    this.load.image('skipButton', './buttons/skipButton.png');
+    this.load.image('skipButtonFocus', './buttons/skipButtonFocus.png');
+    this.load.image('confirmButton', './buttons/confirmButton.png');
+    this.load.image('confirmButtonFocus', './buttons/confirmButtonFocus.png');
+    this.load.image('nextButton', './buttons/nextButton.png');
+    this.load.image('nextButtonFocus', './buttons/nextButtonFocus.png');
+    this.load.image('highscoresButton', './buttons/highscoresButton.png');
+    this.load.image('highscoresButtonFocus', './buttons/highscoresButtonFocus.png');
+    this.load.image('mainMenuButton', './buttons/mainMenuButton.png');
+    this.load.image('mainMenuButtonFocus', './buttons/mainMenuButtonFocus.png');
+
   }
 }
