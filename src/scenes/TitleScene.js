@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import ButtonGen from '../objects/ButtonGem';
+import ButtonGen from '../objects/ButtonGen';
 import config from '../config/config';
 import ScrollingBackground from '../objects/ScrollingBackground';
 

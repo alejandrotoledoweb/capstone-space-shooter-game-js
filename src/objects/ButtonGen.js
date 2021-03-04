@@ -11,9 +11,9 @@ export default class ButtonGen extends Phaser.GameObjects.Container {
 
     this.add(this.button);
 
-    if(transition) {
+    if (transition) {
       this.button.on('pinterdown', () => {
-        if(select) {select.play(); }
+        if (select) {select.play(); }
         this.scene.cameras.main.faceOut(1000, 0, 0, 0);
         this.scene.cameras.main.once(
           Phaser.Cameras.Scene2D.Events.FACE_OUT_COMPLETE, () => {
