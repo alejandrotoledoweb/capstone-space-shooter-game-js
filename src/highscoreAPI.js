@@ -1,5 +1,6 @@
 import 'regenerator-runtime';
 
+// to fetch API directly
 const fetch = require('node-fetch');
 
 const initializeGame = async () => {
@@ -10,7 +11,7 @@ const initializeGame = async () => {
         Accept: 'application/json',
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ name: 'Deep Space Defence ' }),
+      body: JSON.stringify({ name: 'Deep Space Defence' }),
     });
     const response = await request.json();
     return response;
