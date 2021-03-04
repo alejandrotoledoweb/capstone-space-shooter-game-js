@@ -9,7 +9,7 @@ export default class CreditsScene extends Phaser.Scene {
   create() {
     this.creditsText = this.add.text(0, 0, 'Credits', { fontSize: '32px', fill: '#fff' });
     this.createdByText = this.add.text(0, 0, 'Created By: Alejandro Toledo', { fontSize: '26px', fill: '#fff' });
-    this.imagesTaken = this.add.text(0, 0, 'Images and sound from: OpenGameArt.Org', { fontSize: '26px', fill: '#fff' });
+    this.imagesTaken = this.add.text(0, 0, 'Images and Sound from: OpenGameArt.Org', { fontSize: '26px', fill: '#fff' });
     this.zone = this.add.zone(config.width / 2, config.height / 2, config.width, config.height);
 
     Phaser.Display.Align.In.Center(
@@ -42,7 +42,7 @@ export default class CreditsScene extends Phaser.Scene {
       targets: this.createdByText,
       y: -300,
       ease: 'Power1',
-      duration: 8000,
+      duration: 6000,
       delay: 1000,
       onComplete: () => {
         this.destroy();
@@ -54,7 +54,7 @@ export default class CreditsScene extends Phaser.Scene {
       targets: this.imagesTaken,
       y: -300,
       ease: 'Power1',
-      duration: 8000,
+      duration: 6000,
       delay: 1000,
       onComplete: () => {
         this.destroy();
