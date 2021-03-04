@@ -146,7 +146,7 @@ export default class GameScene extends Phaser.Scene {
       fontFamily: 'Visitor TT2 BRK, sans-serif, monospace',
       fontSize: '46px',
       fontStyle: 'normal',
-      color: '#9FA8DA',
+      color: '#005784',
       align: 'right',
       stroke: '#fff',
       strokeThickness: 1,
@@ -156,9 +156,9 @@ export default class GameScene extends Phaser.Scene {
       fontFamily: 'Visitor TT1 BRK, sans-serif, monospace',
       fontSize: '38px',
       fontStyle: 'normal',
-      color: '#00FF99',
+      color: '#005784',
       align: 'left',
-      stroke: '#FDFEFE',
+      stroke: '#fff',
       strokeThickness: 1,
     });
 
@@ -254,7 +254,7 @@ export default class GameScene extends Phaser.Scene {
     const { count } = this.sys.game.globals;
     if (count === 20) {
       this.playerMessages.setText('All dead soldier.\nKeep like that!');
-      const captain = this.add.image(580, 580, 'starfleetCaptain');
+      const captain = this.add.image(480, 480, 'starfleetCaptain');
       captain.setScale(0.15);
       this.tweens.add({
         targets: this.fiftyScore,
@@ -271,8 +271,8 @@ export default class GameScene extends Phaser.Scene {
         },
       });
     } else if (count === 20) {
-      this.playerMessages.setText("That's 20 more.\nKeep focused!");
-      const captain = this.add.image(580, 580, 'starfleetCaptain');
+      this.playerMessages.setText('You kill 20 enemies!.\nNice work, soldier!');
+      const captain = this.add.image(480, 480, 'starfleetCaptain');
       captain.setScale(0.15);
       this.tweens.add({
         targets: this.fiftyScore,
@@ -289,8 +289,8 @@ export default class GameScene extends Phaser.Scene {
         },
       });
     } else if (count === 30) {
-      this.playerMessages.setText("You've downed 30 now!\nYou're on fire!");
-      const captain = this.add.image(580, 580, 'starfleetCaptain');
+      this.playerMessages.setText('You got 30 down now!!\nGreat focus, soldier!');
+      const captain = this.add.image(480, 480, 'starfleetCaptain');
       captain.setScale(0.15);
       this.tweens.add({
         targets: this.fiftyScore,
@@ -307,8 +307,8 @@ export default class GameScene extends Phaser.Scene {
         },
       });
     } else if (count === 50) {
-      this.playerMessages.setText("That's the 50th.\nYou got this!");
-      const captain = this.add.image(580, 580, 'starfleetCaptain');
+      this.playerMessages.setText('You reach 50th.\nYou got this!');
+      const captain = this.add.image(480, 480, 'starfleetCaptain');
       captain.setScale(0.15);
       this.tweens.add({
         targets: this.fiftyScore,
