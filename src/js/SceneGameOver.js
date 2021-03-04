@@ -1,9 +1,9 @@
 class SceneGameOver extends Phaser.Scene {
   constructor() {
-    super({ key: "SceneGameOver" });
+    super({ key: 'SceneGameOver' });
   }
 
   create() {
-    
+
   }
 }

@@ -149,7 +149,7 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('ninjaLaser1', './lasers.blue1.png');
 
     // UFO ship
-    this.load.spritesheet('ufo', './ships/UFO.png',{
+    this.load.spritesheet('ufo', './ships/UFO.png', {
       frameWidth: 32,
       frameHeight: 32,
     });
