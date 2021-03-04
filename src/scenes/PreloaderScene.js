@@ -189,5 +189,45 @@ export default class PreloaderScene extends Phaser.Scene {
 
     // Player lasers
     this.load.image('playerLaser3', './lasers/turq/3.png');
+
+    // SFX effects
+
+    this.load.audio('laser2', './sound/lasers/Laser_01.mp3');
+    this.load.audio('laser4', './sound/lasers/Laser_03.mp3');
+    this.load.audio('laser7', './sound/lasers/Laser_06.mp3');
+
+    this.load.audio('explosion1', './sound/explosions/explosion01.wav');
+    this.load.audio('explosion2', './sound/explosions/explosion02.wav');
+    this.load.audio('explosion3', './sound/explosions/explosion03.wav');
+    this.load.audio('explosion4', './sound/explosions/explosion04.wav');
+    this.load.audio('explosion5', './sound/explosions/explosion05.wav');
+    this.load.audio('explosion6', './sound/explosions/explosion06.wav');
+    this.load.audio('explosion7', './sound/explosions/explosion07.wav');
+    this.load.audio('explosion8', './sound/explosions/explosion08.wav');
+    this.load.audio('explosion9', './sound/explosions/explosion09.wav');
+
+    this.load.audio('buttonHover', './sound/buttons/buttonHover.ogg');
+    this.load.audio('buttonSelect', './sound/buttons/buttonSelect.ogg');
+    this.load.audio('gameStart', './sound/buttons/gameStart.mp3');
+
+    // Game Music
+    this.load.audio('titleMusic', ['./music/titleMusic.ogg']);
+    this.load.audio('gameMusic', './music/gameMusic.mp3');
+  }
+
+  init() {
+    this.readyCount = 0;
+  }
+
+  ready() {
+    this.readyCount += 1;
+    if (this.readyCount === 2) {
+      this.cameras.main.fadeOut(1000, 0, 0, 0);
+      this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, () => {
+        this.time.delayedCall(3000, () => {
+          this.scene.start('PlayerNameScene');
+        });
+      });
+    }
   }
 }
