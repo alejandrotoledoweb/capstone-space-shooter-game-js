@@ -46,7 +46,7 @@ export default class PostGameHighscoresScene extends Phaser.Scene {
             this.add.text(config.width / 2, (85 * (i + 1.1)) + 100, text, {
               fontFamily: 'Visitor TT2 BRK',
               fontSize: '38px',
-              color: '#00ffee',
+              color: '#00f6',
               align: 'center',
               lineHeight: '1.5',
             }).setOrigin(0.5, 0.5);
@@ -56,7 +56,7 @@ export default class PostGameHighscoresScene extends Phaser.Scene {
           this.add.text(config.width / 2, (85 * (i + 1.1)) + 100, text, {
             fontFamily: 'Visitor TT2 BRK',
             fontSize: '38px',
-            color: '#FFF',
+            color: '#fff',
             align: 'center',
             lineHeight: '1.5',
           }).setOrigin(0.5, 0.5);
