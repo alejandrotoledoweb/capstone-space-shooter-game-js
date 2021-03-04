@@ -6,27 +6,26 @@ export default class PreloaderScene extends Phaser.Scene {
   }
 
   preload() {
-    this.cameras.main.faceIn(800, 0, 0, 0);
+    this.cameras.main.fadeIn(800, 0, 0, 0);
     this.add.image(400, 330, 'bootLogo');
-    this.add.image(400, 760, 'bootcopyright');
+    this.add.image(400, 760, 'bootCopyright');
     const progressBar = this.add.graphics();
     const progressBox = this.add.graphics();
-    progressBar.fillStyle(0x222222, 0.8);
-    progressBox.fillStyle(240, 490, 320, 50);
+    progressBox.fillStyle(0x222222, 0.8);
+    progressBox.fillRect(240, 490, 320, 50);
 
     const { width } = this.cameras.main;
     const { height } = this.cameras.main;
-    const LoadingText = this.make.text({
+    const loadingText = this.make.text({
       x: width / 2,
       y: height / 2 + 65,
-      text: 'Loaing Game...',
+      text: 'Loading...',
       style: {
         font: '20px monospace',
         fill: '#ffffff',
       },
     });
-
-    LoadingText.setOrigin(0.5, 0.5);
+    loadingText.setOrigin(0.5, 0.5);
 
     const percentText = this.make.text({
       x: width / 2 - 15,
@@ -48,11 +47,10 @@ export default class PreloaderScene extends Phaser.Scene {
         fill: '#ffffff',
       },
     });
-
     assetText.setOrigin(0.5, 0.5);
 
     this.load.on('progress', (value) => {
-      percentText.setText(`${parseInt(value * 100, 0)}%`);
+      percentText.setText(`${parseInt(value * 100)}%`);
       progressBar.clear();
       progressBar.fillStyle(0xffffff, 1);
       progressBar.fillRect(250, 500, 300 * value, 30);
@@ -65,18 +63,18 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.on('complete', () => {
       progressBar.destroy();
       progressBox.destroy();
-      LoadingText.destroy();
+      loadingText.destroy();
       percentText.destroy();
       assetText.destroy();
       this.ready();
     });
 
-    this.timeEvent = this.time.delayedCall(5000, this.ready, [], this);
+    this.timedEvent = this.time.delayedCall(4000, this.ready, [], this);
 
     this.load.crossOrigin = 'Anonymous';
-    this.load.image('titleScreen', './logos/dfdLogo.png');
-    this.load.image('playButton', './ buttonsplayButton.png');
-    this.load.image('PlayButtonsFocus', 'playButtonFocus.png');
+    this.load.image('titleScreen', './logos/dsdLogo.png');
+    this.load.image('playButton', './buttons/playButton.png');
+    this.load.image('playButtonFocus', './buttons/playButtonFocus.png');
     this.load.image('optionsButton', './buttons/optionsButton.png');
     this.load.image('optionsButtonFocus', './buttons/optionsButtonFocus.png');
     this.load.image('creditsButton', './buttons/creditsButton.png');
@@ -99,20 +97,20 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('mainMenuButton', './buttons/mainMenuButton.png');
     this.load.image('mainMenuButtonFocus', './buttons/mainMenuButtonFocus.png');
 
-    // GameScenes Assets
-    this.load.image('background0', './background/bkgd_0.png');
-    this.load.image('background1', './background/bkgd_1.png');
-    this.load.image('background2', './background/bkgd_2.png');
-    this.load.image('background3', './background/bkgd_3.png');
-    this.load.image('background4', './background/bkgd_4.png');
-    this.load.image('background5', './background/bkgd_5.png');
-    this.load.image('background6', './background/bkgd_6.png');
-    this.load.image('background7', './background/bkgd_7.png');
+    // GAME SCENE ASSETS
+    this.load.image('background0', './backgrounds/bkgd_0.png');
+    this.load.image('background1', './backgrounds/bkgd_1.png');
+    this.load.image('background2', './backgrounds/bkgd_2.png');
+    this.load.image('background3', './backgrounds/bkgd_3.png');
+    this.load.image('background4', './backgrounds/bkgd_4.png');
+    this.load.image('background5', './backgrounds/bkgd_5.png');
+    this.load.image('background6', './backgrounds/bkgd_6.png');
+    this.load.image('background7', './backgrounds/bkgd_7.png');
 
-    // Explosion images spreadsheets
-    this.load.spreadsheet('explosion1', './explosions/explosions1.png', {
+    // Explosion spritesheets
+    this.load.spritesheet('explosion1', './explosions/explosion1.png', {
       frameWidth: 96,
-      frameheight: 96,
+      frameHeight: 96,
     });
     this.load.spritesheet('explosion2', './explosions/explosion2.png', {
       frameWidth: 32,
@@ -135,25 +133,23 @@ export default class PreloaderScene extends Phaser.Scene {
       frameHeight: 256,
     });
 
-    // NPC assets
-    this.load.image('startfleetCaptain', './npc/SecurityOfficer.png');
+    // NPC Assets
+    this.load.image('starfleetCaptain', './npc/SecurityOfficer.png');
 
-    // Enemies lasers and ships
+    // Enemy Ships & Lasers
     // Ninja Ship
     this.load.spritesheet('ninja', './ships/Ninja.png', {
       frameWidth: 32,
       frameHeight: 32,
     });
-
     // Ninja Laser
-    this.load.image('ninjaLaser1', './lasers.blue1.png');
+    this.load.image('ninjaLaser1', './lasers/blue/1.png');
 
-    // UFO ship
+    // UFO Ship
     this.load.spritesheet('ufo', './ships/UFO.png', {
       frameWidth: 32,
       frameHeight: 32,
     });
-
     // UFO Lasers
     this.load.image('ufoLasers1', './lasers/red/1.png');
 
@@ -183,15 +179,14 @@ export default class PreloaderScene extends Phaser.Scene {
 
     // Player Ship
     this.load.spritesheet('player', './ships/Lighter.png', {
-      frameWidth: 45,
-      frameHeight: 45,
+      frameWidth: 32,
+      frameHeight: 32,
     });
 
     // Player lasers
     this.load.image('playerLaser3', './lasers/turq/3.png');
 
-    // SFX effects
-
+    // SFX
     this.load.audio('laser2', './sound/lasers/Laser_01.mp3');
     this.load.audio('laser4', './sound/lasers/Laser_03.mp3');
     this.load.audio('laser7', './sound/lasers/Laser_06.mp3');
@@ -220,7 +215,7 @@ export default class PreloaderScene extends Phaser.Scene {
   }
 
   ready() {
-    this.readyCount += 1;
+    this.readyCount++;
     if (this.readyCount === 2) {
       this.cameras.main.fadeOut(1000, 0, 0, 0);
       this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, () => {

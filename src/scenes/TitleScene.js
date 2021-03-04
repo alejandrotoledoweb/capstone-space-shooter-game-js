@@ -15,7 +15,7 @@ export default class TitleScene extends Phaser.Scene {
       gameStart: this.sound.add('gameStart'),
     };
 
-    // Main Game button
+    // Game Button
     this.gameButton = this.add.image(config.width / 2, config.height / 2 + 40, 'playButton').setInteractive();
 
     this.gameButton.on('pointerover', () => {
@@ -37,7 +37,6 @@ export default class TitleScene extends Phaser.Scene {
         });
       });
     });
-
     // Options button
     this.optionsButton = new ButtonGen(this, config.width / 2, config.height / 2 + 120, 'optionsButton', 'optionsButtonFocus', 'Options', this.sfx.btnHover, this.sfx.btnSelect);
 
@@ -57,7 +56,7 @@ export default class TitleScene extends Phaser.Scene {
     }
 
     this.backgrounds = [];
-    for (let i = 0; i < 8; i += 1) {
+    for (let i = 0; i < 8; i++) {
       const keys = ['background0', 'background1', 'background2', 'background3', 'background4', 'background5', 'background6', 'background7'];
       const bg = new ScrollingBackground(this, keys[i], i * 3);
       this.backgrounds.push(bg);
@@ -67,7 +66,7 @@ export default class TitleScene extends Phaser.Scene {
   }
 
   update() {
-    for (let i = 0; i < this.backgrounds.length; i += 1) {
+    for (let i = 0; i < this.backgrounds.length; i++) {
       this.backgrounds[i].update();
     }
   }

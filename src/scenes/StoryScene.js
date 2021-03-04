@@ -42,7 +42,7 @@ export default class StoryScene extends Phaser.Scene {
 
       onComplete: () => {
         setTimeout(() => {
-          this.destroy();
+          this.destroy;
           this.cameras.main.fadeIn(1000, 0, 0);
           this.tweens.addCounter({
             from: 0,
@@ -55,7 +55,7 @@ export default class StoryScene extends Phaser.Scene {
             onComplete: () => {
               setTimeout(() => {
                 this.cameras.main.fadeOut(1000, 0, 0, 0);
-                this.destroy();
+                this.destroy;
                 this.cameras.main.fadeIn(1000, 0, 0);
                 this.tweens.addCounter({
                   from: 0,
@@ -67,7 +67,7 @@ export default class StoryScene extends Phaser.Scene {
                   onComplete: () => {
                     setTimeout(() => {
                       this.cameras.main.fadeOut(1000, 0, 0, 0);
-                      this.destroy();
+                      this.destroy;
                       this.cameras.main.once(
                         Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, () => {
                           this.time.delayedCall(3000, () => {

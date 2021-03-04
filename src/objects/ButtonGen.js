@@ -7,24 +7,24 @@ export default class ButtonGen extends Phaser.GameObjects.Container {
     this.x = x;
     this.y = y;
 
-    this.button = this.scene.add.sprite(0, 0, key1).setIntereactive();
+    this.button = this.scene.add.sprite(0, 0, key1).setInteractive();
 
     this.add(this.button);
 
     if (transition) {
-      this.button.on('pinterdown', () => {
+      this.button.on('pointerdown', () => {
         if (select) { select.play(); }
-        this.scene.cameras.main.faceOut(1000, 0, 0, 0);
+        this.scene.cameras.main.fadeOut(1000, 0, 0, 0);
         this.scene.cameras.main.once(
-          Phaser.Cameras.Scene2D.Events.FACE_OUT_COMPLETE, () => {
+          Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, () => {
             this.scene.time.delayedCall(transition, () => {
-              this.scene.sene.start(targetScene);
+              this.scene.scene.start(targetScene);
             });
           },
         );
       });
     } else {
-      this.button.on('pinterout', () => {
+      this.button.on('pointerdown', () => {
         this.scene.scene.start(targetScene);
         select.play();
       });
@@ -36,7 +36,7 @@ export default class ButtonGen extends Phaser.GameObjects.Container {
     });
 
     this.button.on('pointerout', () => {
-      this.button.on.setTexture(key1);
+      this.button.setTexture(key1);
     });
 
     this.scene.add.existing(this);

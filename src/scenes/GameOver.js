@@ -15,14 +15,17 @@ export default class GameOverScene extends Phaser.Scene {
       gameStart: this.sound.add('gameStart'),
     };
 
-    //  Setup Game Button
-    this.gameButton = new ButtonGen(this, config.widht / 2, config.height / 2 + 50, 'restartButton', 'restartButtonFocus', 'Game', this.sfx.btnHover, this.sfx.gameStart);
+    // Game Button
+    this.gameButton = new ButtonGen(this, config.width / 2, config.height / 2 + 50, 'restartButton', 'restartButtonFocus', 'Game', this.sfx.btnHover, this.sfx.gameStart);
 
-    // Setup Options Buttons
-    this.optionsButton = new ButtonGen(this, config.width / 2, config.height / 2 + 130, 'opstionsButton', 'optionsButtonFocus', 'Options', this.sfx.btnHover, this.sfx.btnSelect);
+    // Options button
+    this.optionsButton = new ButtonGen(this, config.width / 2, config.height / 2 + 130, 'optionsButton', 'optionsButtonFocus', 'Options', this.sfx.btnHover, this.sfx.btnSelect);
 
-    // Setup the Credits Button
-    this.mainMenuButton = new ButtonGen(this, config.width / 2, config.height / 3 + 210, 'mainMenuButton', 'mainMenuButtonFocus', 'Game Credits', this.sfx.btnHover, this.sfx.btnSelect);
+    // Credits button
+    this.creditsButton = new ButtonGen(this, config.width / 2, config.height / 2 + 210, 'creditsButton', 'creditsButtonFocus', 'Credits', this.sfx.btnHover, this.sfx.btnSelect);
+
+    // Main Menu button
+    this.mainMenuButton = new ButtonGen(this, config.width / 2, config.height / 2 + 290, 'mainMenuButton', 'mainMenuButtonFocus', 'Title', this.sfx.btnHover, this.sfx.btnSelect);
 
     // Add background music
     this.model = this.sys.game.globals.model;
@@ -34,7 +37,7 @@ export default class GameOverScene extends Phaser.Scene {
     }
 
     this.backgrounds = [];
-    for (let i = 0; i < 8; i += 1) {
+    for (let i = 0; i < 8; i++) {
       const keys = ['background0', 'background1', 'background2', 'background3', 'background4', 'background5', 'background6', 'background7'];
       const bg = new ScrollingBackground(this, keys[i], i * 3);
       this.backgrounds.push(bg);
@@ -44,7 +47,7 @@ export default class GameOverScene extends Phaser.Scene {
   }
 
   update() {
-    for (let i = 0; i < this.backgrounds.length; i += 1) {
+    for (let i = 0; i < this.backgrounds.length; i++) {
       this.backgrounds[i].update();
     }
   }

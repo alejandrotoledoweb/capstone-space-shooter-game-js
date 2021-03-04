@@ -1,8 +1,8 @@
 import Phaser from 'phaser';
 import Entity from './Entity';
-import UFOLaser from '../weapons/AlienLaser';
+import UFOLaser from '../weapons/UFOLaser';
 
-export default class Alien extends Entity {
+export default class UFO extends Entity {
   constructor(scene, x, y) {
     super(scene, x, y, 'ufo', 'UFO');
     this.body.velocity.y = Phaser.Math.Between(35, 65);
@@ -15,7 +15,7 @@ export default class Alien extends Entity {
 
     this.shootTimer = this.scene.time.addEvent({
 
-      delay: 2000,
+      delay: 1800,
       callback: () => {
         const laser = new UFOLaser(
           this.scene,

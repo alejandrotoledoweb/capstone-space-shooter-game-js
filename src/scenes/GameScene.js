@@ -1,6 +1,6 @@
 import Phaser from 'phaser';
 import Player from '../entities/Player';
-import Alien from '../entities/Alien';
+import UFO from '../entities/UFO';
 import Ninja from '../entities/Ninja';
 import Paranoid from '../entities/Paranoid';
 import Saboteur from '../entities/Saboteur';
@@ -33,8 +33,8 @@ export default class GameScene extends Phaser.Scene {
     });
 
     this.anims.create({
-      key: 'alien',
-      frames: this.anims.generateFrameNumbers('alien'),
+      key: 'ufo',
+      frames: this.anims.generateFrameNumbers('ufo'),
       frameRate: 20,
       repeat: -1,
     });
@@ -122,15 +122,15 @@ export default class GameScene extends Phaser.Scene {
         this.sound.add('explosion9'),
       ],
       laser: [
-        this.sound.add('laser2', { volume: 0.6 }),
-        this.sound.add('laser4', { volume: 0.6 }),
-        this.sound.add('laser7', { volume: 0.6 }),
+        this.sound.add('laser2', { volume: 0.5 }),
+        this.sound.add('laser4', { volume: 0.5 }),
+        this.sound.add('laser7', { volume: 0.5 }),
       ],
     };
 
     this.allBackgrounds = ['background0', 'background1', 'background2', 'background3', 'background4', 'background5', 'background6', 'background7'];
     this.background = [];
-    for (let i = 0; i < this.allBackgrounds.length; i += 1) {
+    for (let i = 0; i < this.allBackgrounds.length; i++) {
       const bg = new ScrollingBackground(this, this.allBackgrounds[i], i * 10);
       this.background.push(bg);
     }
@@ -146,7 +146,7 @@ export default class GameScene extends Phaser.Scene {
       fontFamily: 'Visitor TT2 BRK, sans-serif, monospace',
       fontSize: '46px',
       fontStyle: 'normal',
-      color: '#005784',
+      color: '#9FA8DA',
       align: 'right',
       stroke: '#fff',
       strokeThickness: 1,
@@ -156,9 +156,9 @@ export default class GameScene extends Phaser.Scene {
       fontFamily: 'Visitor TT1 BRK, sans-serif, monospace',
       fontSize: '38px',
       fontStyle: 'normal',
-      color: '#005784',
+      color: '#00FF99',
       align: 'left',
-      stroke: '#fff',
+      stroke: '#FDFEFE',
       strokeThickness: 1,
     });
 
@@ -192,7 +192,7 @@ export default class GameScene extends Phaser.Scene {
               0,
             );
           } else if (Phaser.Math.Between(0, 10) >= 5) {
-            enemy = new Alien(
+            enemy = new UFO(
               this,
               Phaser.Math.Between(0, this.game.config.width),
               0,
@@ -252,9 +252,9 @@ export default class GameScene extends Phaser.Scene {
 
   scoreIntervals() {
     const { count } = this.sys.game.globals;
-    if (count === 20) {
-      this.playerMessages.setText('All dead soldier.\nKeep like that!');
-      const captain = this.add.image(480, 480, 'starfleetCaptain');
+    if (count === 10) {
+      this.playerMessages.setText("That's 10 down pilot.\nKeep it up!");
+      const captain = this.add.image(680, 680, 'starfleetCaptain');
       captain.setScale(0.15);
       this.tweens.add({
         targets: this.fiftyScore,
@@ -271,8 +271,8 @@ export default class GameScene extends Phaser.Scene {
         },
       });
     } else if (count === 20) {
-      this.playerMessages.setText('You kill 20 enemies!.\nNice work, soldier!');
-      const captain = this.add.image(480, 480, 'starfleetCaptain');
+      this.playerMessages.setText("That's 20 more.\nKeep focused!");
+      const captain = this.add.image(680, 680, 'starfleetCaptain');
       captain.setScale(0.15);
       this.tweens.add({
         targets: this.fiftyScore,
@@ -289,8 +289,8 @@ export default class GameScene extends Phaser.Scene {
         },
       });
     } else if (count === 30) {
-      this.playerMessages.setText('You got 30 down now!!\nGreat focus, soldier!');
-      const captain = this.add.image(480, 480, 'starfleetCaptain');
+      this.playerMessages.setText("You've downed 30 now!\nYou're on fire!");
+      const captain = this.add.image(680, 680, 'starfleetCaptain');
       captain.setScale(0.15);
       this.tweens.add({
         targets: this.fiftyScore,
@@ -307,8 +307,8 @@ export default class GameScene extends Phaser.Scene {
         },
       });
     } else if (count === 50) {
-      this.playerMessages.setText('You reach 50th.\nYou got this!');
-      const captain = this.add.image(480, 480, 'starfleetCaptain');
+      this.playerMessages.setText("That's the 50th.\nThey're coming fast!");
+      const captain = this.add.image(680, 680, 'starfleetCaptain');
       captain.setScale(0.15);
       this.tweens.add({
         targets: this.fiftyScore,
@@ -330,12 +330,12 @@ export default class GameScene extends Phaser.Scene {
   increaseScore(enemy) {
     if (enemy.getData('type') === 'Paranoid' || enemy.getData('type') === 'Saboteur') {
       this.sys.game.globals.score += 1;
-    } else if (enemy.getData('type') === 'Alien' || enemy.getData('type') === 'Ninja') {
+    } else if (enemy.getData('type') === 'UFO' || enemy.getData('type') === 'Ninja') {
       this.sys.game.globals.score += 2;
     } else if (enemy.getData('type') === 'Lightning') {
       this.sys.game.globals.score += 4;
     }
-    this.sys.game.globals.count += 1;
+    this.sys.game.globals.count++;
     this.scoreIntervals();
 
     this.playerScore.setText(`score : ${this.sys.game.globals.score}`);
@@ -361,7 +361,7 @@ export default class GameScene extends Phaser.Scene {
 
   getEnemiesByType(type) {
     const arr = [];
-    for (let i = 0; i < this.enemies.getChildren().length; i += 1) {
+    for (let i = 0; i < this.enemies.getChildren().length; i++) {
       const enemy = this.enemies.getChildren()[i];
       if (enemy.getData('type') === type) {
         arr.push(enemy);
@@ -392,7 +392,7 @@ export default class GameScene extends Phaser.Scene {
       }
     }
 
-    for (let i = 0; i < this.enemies.getChildren().length; i += 1) {
+    for (let i = 0; i < this.enemies.getChildren().length; i++) {
       const enemy = this.enemies.getChildren()[i];
       enemy.update();
 
@@ -409,7 +409,7 @@ export default class GameScene extends Phaser.Scene {
       }
     }
 
-    for (let i = 0; i < this.enemyLasers; i += 1) {
+    for (let i = 0; i < this.enemyLasers; i++) {
       const laser = this.enemyLasers.getChildren()[i];
       laser.update();
       if (laser.x < -laser.displayWidth
@@ -422,7 +422,7 @@ export default class GameScene extends Phaser.Scene {
       }
     }
 
-    for (let i = 0; i < this.playerLasers.getChildren().length; i += 1) {
+    for (let i = 0; i < this.playerLasers.getChildren().length; i++) {
       const laser = this.playerLasers.getChildren()[i];
       if (laser.x < -laser.displayWidth
         || laser.x > this.game.config.width + laser.displayWidth
@@ -434,7 +434,7 @@ export default class GameScene extends Phaser.Scene {
       }
     }
 
-    for (let i = 0; i < this.background.length; i += 1) {
+    for (let i = 0; i < this.background.length; i++) {
       this.background[i].update();
     }
   }

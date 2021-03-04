@@ -7,19 +7,17 @@ export default class CreditsScene extends Phaser.Scene {
   }
 
   create() {
-    this.creditsText = this.add.text(0, 0, 'Credits', { fontSize: '32px', fill: '#fff' });
-    this.createdByText = this.add.text(0, 0, 'Created By: Alejandro Toledo', { fontSize: '26px', fill: '#fff' });
-    this.imagesTaken = this.add.text(0, 0, 'Images and Sound from: OpenGameArt.Org', { fontSize: '26px', fill: '#fff' });
+    this.creditsText = this.add.text(0, 0, 'Credits', { fontSize: '32px', fill: '#31a2f2' });
+    this.createdByText = this.add.text(0, 0, 'Created By: Alejandro Toledo', { fontSize: '26px', fill: '#31a2f2' });
+    this.imagesTaken = this.add.text(0, 0, 'Images and sounds from: OpenGameArt.org', { fontSize: '26px', fill: '#31a2f2' });
     this.zone = this.add.zone(config.width / 2, config.height / 2, config.width, config.height);
 
     Phaser.Display.Align.In.Center(
-      this.imagesTaken,
       this.creditsText,
       this.zone,
     );
 
     Phaser.Display.Align.In.Center(
-      this.imagesTaken,
       this.createdByText,
       this.zone,
     );
@@ -34,7 +32,7 @@ export default class CreditsScene extends Phaser.Scene {
       duration: 3000,
       delayed: 1000,
       onComplete: () => {
-        this.destroy();
+        this.destroy;
       },
     });
 
@@ -42,10 +40,10 @@ export default class CreditsScene extends Phaser.Scene {
       targets: this.createdByText,
       y: -300,
       ease: 'Power1',
-      duration: 6000,
+      duration: 8000,
       delay: 1000,
       onComplete: () => {
-        this.destroy();
+        this.destroy;
         this.scene.start('Title');
       },
     });
@@ -54,10 +52,10 @@ export default class CreditsScene extends Phaser.Scene {
       targets: this.imagesTaken,
       y: -300,
       ease: 'Power1',
-      duration: 6000,
+      duration: 8000,
       delay: 1000,
       onComplete: () => {
-        this.destroy();
+        this.destroy;
         this.scene.start('Title');
       },
     });

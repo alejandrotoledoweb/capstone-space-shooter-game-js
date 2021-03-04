@@ -1,29 +1,29 @@
 export default class ScrollingBackground {
-  constructor(scene, key, velocitiyY) {
+  constructor(scene, key, velocityY) {
     this.scene = scene;
     this.key = key;
-    this.velocitityY = velocitiyY;
+    this.velocityY = velocityY;
     this.layers = this.scene.add.group();
     this.createLayers();
   }
 
   createLayers() {
-    for (let i = 0; i < 5; i += 1) {
+    for (let i = 0; i < 5; i++) {
       const layer = this.scene.add.sprite(400, 400, this.key);
-      layer.y = (layer.desplayHeight * 1);
+      layer.y = (layer.displayHeight * i);
       layer.setScale(1, 1);
-      layer.setDeth(-5);
+      layer.setDepth(-5);
       this.scene.physics.world.enableBody(layer, 0);
-      layer.body.velocitity.y = this.velocitityY;
+      layer.body.velocity.y = this.velocityY;
 
       this.layers.add(layer);
     }
   }
 
   update() {
-    if (this.layers.getChilder()[0].y > 0) {
-      for (let i = 0; i < this.layers.getChilder().length; i += 1) {
-        const layer = this.layers.getChilder()[i];
+    if (this.layers.getChildren()[0].y > 0) {
+      for (let i = 0; i < this.layers.getChildren().length; i++) {
+        const layer = this.layers.getChildren()[i];
         layer.y = (-layer.displayHeight) + (layer.displayHeight * i);
       }
     }
