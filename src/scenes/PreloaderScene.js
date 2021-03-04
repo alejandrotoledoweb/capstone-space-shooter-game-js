@@ -99,5 +99,20 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('mainMenuButton', './buttons/mainMenuButton.png');
     this.load.image('mainMenuButtonFocus', './buttons/mainMenuButtonFocus.png');
 
+    // GameScenes Assets
+    this.load.image('background0', './background/bkgd_0.png');
+    this.load.image('background1', './background/bkgd_1.png');
+    this.load.image('background2', './background/bkgd_2.png');
+    this.load.image('background3', './background/bkgd_3.png');
+    this.load.image('background4', './background/bkgd_4.png');
+    this.load.image('background5', './background/bkgd_5.png');
+    this.load.image('background6', './background/bkgd_6.png');
+    this.load.image('background7', './background/bkgd_7.png');
+
+    // Explosion images spreadsheets
+    this.load.spreadsheet('explosion1', './explosions/explosions1.png', {
+      frameWidth: 96,
+      frameheight: 96,
+    });
   }
 }
