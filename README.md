@@ -2,17 +2,32 @@
 
 # Capstone-space-shooter-game-js
 
-> One paragraph statement about the project.
+I built this game as part of the Final Project of Full-Stack Developer at Microverse School. This is a full JavaScript app about a space shooter game.
+I implemented this game using Phaser 3 as the main dependency for the game.
 
-![screenshot](./app_screenshot.png)
+![screenshot](./src/assets/screenshot-game.png)
 
-Additional description about the project and its features.
+I use npm and webpack to compile files and assets.
+Also, I use Jest to test the functions created in this game.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- JavaScript
+- Webpack
+- Phaser 3
+- Babel
+- Gh-pages
+- Jest
+- Phaser regenerator-runtime
+
+### Linters Used
+
+- Eslint
+- Stylelint
+
+All assets as images, sounds and music from:
+
+[opengameart.org](https://opengameart.org/)
 
 ## Live Demo
 
@@ -49,11 +64,6 @@ To get a local copy up and running follow these simple example steps.
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
 - LinkedIn: [LinkedIn](https://linkedin.com/linkedinhandle)
 
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/linkedinhandle)
 
 ## 🤝 Contributing
 
