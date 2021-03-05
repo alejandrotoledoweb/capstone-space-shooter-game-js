@@ -179,17 +179,17 @@ export default class PreloaderScene extends Phaser.Scene {
 
     // Player Ship
     this.load.spritesheet('player', './ships/Lighter.png', {
-      frameWidth: 32,
-      frameHeight: 32,
+      frameWidth: 50,
+      frameHeight: 50,
     });
 
     // Player lasers
     this.load.image('playerLaser3', './lasers/turq/3.png');
 
     // SFX
-    this.load.audio('laser2', './sound/lasers/Laser_01.mp3');
-    this.load.audio('laser4', './sound/lasers/Laser_03.mp3');
-    this.load.audio('laser7', './sound/lasers/Laser_06.mp3');
+    this.load.audio('laser2', './sound/lasers/sfx_wpn_laser3.wav');
+    this.load.audio('laser4', './sound/lasers/sfx_wpn_laser5.wav');
+    this.load.audio('laser7', './sound/lasers/sfx_wpn_laser11.wav');
 
     this.load.audio('explosion1', './sound/explosions/explosion01.wav');
     this.load.audio('explosion2', './sound/explosions/explosion02.wav');
