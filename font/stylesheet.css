@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Visitor TT2 BRK';
+  src:
+    url('Retronoid.ttf') format('ttf'),
+    url('Retronoid.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Visitor TT1 BRK';
+  src:
+    url('Retronoid\ Italic.ttf') format('ttf'),
+    url('Retronoid\ Italic.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
