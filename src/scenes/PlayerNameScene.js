@@ -13,7 +13,7 @@ export default class PlayerNameScene extends Phaser.Scene {
 
   create() {
     this.enteredText = this.add.text(0, 0, '', {
-      fontFamily: 'Visitor TT1 BRK',
+      fontFamily: 'Retro Team',
       fontSize: '36px',
       fontStyle: 'normal',
       color: '#000',
@@ -24,10 +24,10 @@ export default class PlayerNameScene extends Phaser.Scene {
 
     this.inputText = this.add.rexInputText(400, 400, 600, 50, {
       type: 'text',
-      fontFamily: 'Visitor TT1 BRK',
-      placeholder: 'What is your name, soldier?.',
+      fontFamily: 'Retroniod',
+      placeholder: 'What is your name, soldier?',
       fontSize: '36px',
-      color: '#005784',
+      color: '#B2DCEF',
       align: 'center',
       borderBottom: '4px solid #005784',
     }).setOrigin(0.5, 0.5).on('textchange', () => {

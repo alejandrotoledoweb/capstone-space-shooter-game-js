@@ -143,7 +143,7 @@ export default class GameScene extends Phaser.Scene {
     );
 
     this.playerScore = this.add.text(16, 750, 'score : 0', {
-      fontFamily: 'Visitor TT2 BRK, sans-serif, monospace',
+      fontFamily: 'Retroniod',
       fontSize: '46px',
       fontStyle: 'normal',
       color: '#9FA8DA',
@@ -153,12 +153,12 @@ export default class GameScene extends Phaser.Scene {
     });
 
     this.playerMessages = this.add.text(16, 650, '', {
-      fontFamily: 'Visitor TT1 BRK, sans-serif, monospace',
+      fontFamily: 'Retro Team',
       fontSize: '38px',
       fontStyle: 'normal',
-      color: '#00FF99',
+      color: '#eb8931',
       align: 'left',
-      stroke: '#FDFEFE',
+      stroke: '#fff',
       strokeThickness: 1,
     });
 

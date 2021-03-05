@@ -14,7 +14,7 @@ export default class StoryScene extends Phaser.Scene {
     const textSource = 'Over the years the aliens\ntried to conquer the planet earth\n.\nOne soldier was the last \nstanding and fight against\n He fight endless fights to recover \nthe domain of the earth.';
     const wordCount = textSource.split(' ').length;
     const text = this.add.text(400, 400, '', {
-      fontFamily: 'Visitor TT1 BRK',
+      fontFamily: 'Retro Team',
       fontSize: '36px',
       fontStyle: 'normal',
       color: '#005784',

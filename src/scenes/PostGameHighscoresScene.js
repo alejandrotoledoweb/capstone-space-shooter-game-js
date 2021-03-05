@@ -17,20 +17,20 @@ export default class PostGameHighscoresScene extends Phaser.Scene {
     };
 
     this.highscore = this.add.text(config.width / 2, 100, `${this.playerSettings.pilotName}\nFinal Score: ${this.playerSettings.score}`, {
-      fontFamily: 'Visitor TT2 BRK',
+      fontFamily: 'Retro Team',
       fontSize: '56px',
-      color: '#005784',
+      color: '#31a2f2',
       align: 'center',
       lineHeight: '1.5',
-      border: '4px solid #005784',
+      border: '4px solid #9d9d9d',
     }).setOrigin(0.5, 0.5);
 
     postHighscores(this.playerSettings.pilotName, this.playerSettings.score).then(response => {
       if (response.result !== undefined) {
         this.messages = this.add.text(16, 16, `${response.result}`, {
-          fontFamily: 'Arial',
+          fontFamily: 'Retroniod',
           fontSize: '18px',
-          color: '#005784',
+          color: '#31a2f2',
           align: 'center',
           lineHeight: '1.5',
         });
@@ -39,24 +39,24 @@ export default class PostGameHighscoresScene extends Phaser.Scene {
 
     fetchHighscores().then(response => {
       response.sort((a, b) => b[1] - a[1])
-        .slice(0, 7)
+        .slice(0, 6)
         .map((game, i) => {
           if (game[1] === this.playerSettings.score) {
-            const text = `${i + 1}. Pilot: ${game[0]} --- Score: ${game[1]}`;
+            const text = `${i + 1}. Soldier: ${game[0]} --- Score: ${game[1]}`;
             this.add.text(config.width / 2, (85 * (i + 1.1)) + 100, text, {
-              fontFamily: 'Visitor TT2 BRK',
+              fontFamily: 'Retro Team',
               fontSize: '38px',
-              color: '#00ffee',
+              color: '#31a2f2',
               align: 'center',
               lineHeight: '1.5',
             }).setOrigin(0.5, 0.5);
             return text;
           }
-          const text = `${i + 1}. Pilot: ${game[0]} --- Score: ${game[1]}`;
+          const text = `${i + 1}. Soldier: ${game[0]} --- Score: ${game[1]}`;
           this.add.text(config.width / 2, (85 * (i + 1.1)) + 100, text, {
-            fontFamily: 'Visitor TT2 BRK',
+            fontFamily: 'Retro Team',
             fontSize: '38px',
-            color: '#fff',
+            color: '#31a2f2',
             align: 'center',
             lineHeight: '1.5',
           }).setOrigin(0.5, 0.5);

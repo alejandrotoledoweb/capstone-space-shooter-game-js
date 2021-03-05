@@ -7,7 +7,7 @@ export default class CreditsScene extends Phaser.Scene {
   }
 
   create() {
-    this.creditsText = this.add.text(0, 0, 'Credits', { fontSize: '32px', fill: '#31a2f2' });
+    this.creditsText = this.add.text(0, 0, 'Credits', { fontFamily: 'Retro Team', fontSize: '32px', fill: '#31a2f2' });
     this.createdByText = this.add.text(0, 0, 'Created By: Alejandro Toledo', { fontSize: '26px', fill: '#31a2f2' });
     this.imagesTaken = this.add.text(0, 0, 'Images and sounds from: OpenGameArt.org', { fontSize: '26px', fill: '#31a2f2' });
     this.zone = this.add.zone(config.width / 2, config.height / 2, config.width, config.height);
@@ -45,7 +45,7 @@ export default class CreditsScene extends Phaser.Scene {
       targets: this.createdByText,
       y: -300,
       ease: 'Power1',
-      duration: 3800,
+      duration: 5800,
       delay: 1200,
       onComplete: () => {
         this.destroy;
@@ -57,7 +57,7 @@ export default class CreditsScene extends Phaser.Scene {
       targets: this.imagesTaken,
       y: -300,
       ease: 'Power1',
-      duration: 4000,
+      duration: 5800,
       delay: 1100,
       onComplete: () => {
         this.destroy;

@@ -19,7 +19,7 @@ export default class PreloaderScene extends Phaser.Scene {
     const loadingText = this.make.text({
       x: width / 2 + 100,
       y: height / 2 + 65,
-      text: 'Game Loading...',
+      text: 'Loading Game...',
       style: {
         font: '20px monospace',
         fill: '#ffffff',

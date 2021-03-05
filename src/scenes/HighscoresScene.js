@@ -19,9 +19,9 @@ export default class HighscoresScene extends Phaser.Scene {
         .map((game, i) => {
           const text = `${i + 1}. Pilot: ${game[0]} --- Score: ${game[1]}`;
           this.add.text(config.width / 2, (85 * (i + 1.1)) + 100, text, {
-            fontFamily: 'Visitor TT2 BRK',
+            fontFamily: 'Retroniod',
             fontSize: '48px',
-            color: '#005738',
+            color: '#31A2F2',
             align: 'center',
             lineHeight: '1.5',
           }).setOrigin(0.5, 0.5);
