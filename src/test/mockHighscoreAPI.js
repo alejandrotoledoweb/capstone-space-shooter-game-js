@@ -10,7 +10,7 @@ const initializeGame = async () => {
         Accept: 'application/json',
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ name: 'Deep Space Defence ' }),
+      body: JSON.stringify({ name: 'Space Soldiers' }),
     });
     const response = await request.json();
     return response;
@@ -19,7 +19,7 @@ const initializeGame = async () => {
   }
 };
 
-const postHighscores = async (pilotName, score) => {
+const postHighscores = async (soldier, score) => {
   try {
     const request = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Zl4d7IVkemOTTVg2fUdz/scores/', {
       method: 'POST',
@@ -27,7 +27,7 @@ const postHighscores = async (pilotName, score) => {
         Accept: 'application/json',
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ user: pilotName, score }),
+      body: JSON.stringify({ user: soldier, score }),
     });
     const response = await request.json();
     return response;
