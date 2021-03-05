@@ -21,7 +21,7 @@ export default class HighscoresScene extends Phaser.Scene {
           this.add.text(config.width / 2, (85 * (i + 1.1)) + 100, text, {
             fontFamily: 'Visitor TT2 BRK',
             fontSize: '48px',
-            color: '#00ff33',
+            color: '#005738',
             align: 'center',
             lineHeight: '1.5',
           }).setOrigin(0.5, 0.5);

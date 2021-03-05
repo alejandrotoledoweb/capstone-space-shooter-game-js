@@ -20,16 +20,16 @@ export default class PlayerNameScene extends Phaser.Scene {
       align: 'center',
       fixedHeight: 100,
       fixedWidth: 100,
-    }).setOrigin(0.5, 0.5);
+    }).setOrigin(1.0, 0.5);
 
-    this.inputText = this.add.rexInputText(400, 400, 500, 50, {
+    this.inputText = this.add.rexInputText(400, 400, 600, 50, {
       type: 'text',
       fontFamily: 'Visitor TT1 BRK',
-      placeholder: 'Enter your name, pilot.',
+      placeholder: 'What is your name, soldier?.',
       fontSize: '36px',
-      color: '#00FF33',
+      color: '#005784',
       align: 'center',
-      borderBottom: '4px solid #00FF33',
+      borderBottom: '4px solid #005784',
     }).setOrigin(0.5, 0.5).on('textchange', () => {
       this.enteredText.text = this.inputText.text;
     });

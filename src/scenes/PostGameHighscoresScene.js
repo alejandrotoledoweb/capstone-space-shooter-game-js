@@ -19,10 +19,10 @@ export default class PostGameHighscoresScene extends Phaser.Scene {
     this.highscore = this.add.text(config.width / 2, 100, `${this.playerSettings.pilotName}\nFinal Score: ${this.playerSettings.score}`, {
       fontFamily: 'Visitor TT2 BRK',
       fontSize: '56px',
-      color: '#00FF33',
+      color: '#005784',
       align: 'center',
       lineHeight: '1.5',
-      border: '4px solid #00FF33',
+      border: '4px solid #005784',
     }).setOrigin(0.5, 0.5);
 
     postHighscores(this.playerSettings.pilotName, this.playerSettings.score).then(response => {
@@ -30,7 +30,7 @@ export default class PostGameHighscoresScene extends Phaser.Scene {
         this.messages = this.add.text(16, 16, `${response.result}`, {
           fontFamily: 'Arial',
           fontSize: '18px',
-          color: '#00FF33',
+          color: '#005784',
           align: 'center',
           lineHeight: '1.5',
         });
@@ -56,7 +56,7 @@ export default class PostGameHighscoresScene extends Phaser.Scene {
           this.add.text(config.width / 2, (85 * (i + 1.1)) + 100, text, {
             fontFamily: 'Visitor TT2 BRK',
             fontSize: '38px',
-            color: '#FFF',
+            color: '#fff',
             align: 'center',
             lineHeight: '1.5',
           }).setOrigin(0.5, 0.5);

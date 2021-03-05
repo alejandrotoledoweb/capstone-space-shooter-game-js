@@ -11,17 +11,15 @@ export default class StoryScene extends Phaser.Scene {
     this.cameras.main.fadeIn(1000, 0, 0, 0);
     this.gameMusic = this.sound.add('gameMusic', { volume: 0.5, loop: true });
     this.gameMusic.play();
-    const textSource = "2147. Years of radio silence and not a\nsingle word from the local star\ncluster. \n\nTerra's diplomacy with Centauri 7b had\ndwindled for decades now, opening new\npathways for attack from those less\ninclined to the Terra mindset.";
-    const textSource2 = 'Then, without any prior warning, alarms\nstarted sounding, tracing from the\nOort cloud, inwards. Towards Terra.\n\nEntangled and distorted messages had\nbegun to seep through from outlier\nstationary orbit ships, reporting wave\nafter wave of Nyribean warships.';
-    const textSource3 = 'Thousands, if not millions would be\nlost.\n\nOur first and last chance lies with\nthose positioned at our Deep Space\nDefence posts.';
+    const textSource = 'Over the years the aliens\ntried to conquer the planet earth\n.\nOne soldier was the last \nstanding and fight against\n He fight endless fights to recover \nthe domain of the earth.';
     const wordCount = textSource.split(' ').length;
     const text = this.add.text(400, 400, '', {
       fontFamily: 'Visitor TT1 BRK',
       fontSize: '36px',
       fontStyle: 'normal',
-      color: '#00FF33',
+      color: '#005784',
       wordWrap: true,
-      wordWrapWidth: 600,
+      wordWrapWidth: 400,
       align: 'center',
     }).setOrigin(0.5, 0.5);
 

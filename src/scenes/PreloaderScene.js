@@ -17,9 +17,9 @@ export default class PreloaderScene extends Phaser.Scene {
     const { width } = this.cameras.main;
     const { height } = this.cameras.main;
     const loadingText = this.make.text({
-      x: width / 2,
+      x: width / 2 + 100,
       y: height / 2 + 65,
-      text: 'Loading...',
+      text: 'Game Loading...',
       style: {
         font: '20px monospace',
         fill: '#ffffff',

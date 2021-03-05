@@ -22,14 +22,19 @@ export default class CreditsScene extends Phaser.Scene {
       this.zone,
     );
 
+    Phaser.Display.Align.In.Center(
+      this.imagesTaken,
+      this.zone,
+    );
+
     this.createdByText.setY(1000);
-    this.imagesTaken.setY(1000);
+    this.imagesTaken.setY(1200);
 
     this.creditsTween = this.tweens.add({
       targets: this.creditsText,
       y: -100,
       ease: 'Power1',
-      duration: 3000,
+      duration: 2500,
       delayed: 1000,
       onComplete: () => {
         this.destroy;
@@ -40,8 +45,8 @@ export default class CreditsScene extends Phaser.Scene {
       targets: this.createdByText,
       y: -300,
       ease: 'Power1',
-      duration: 8000,
-      delay: 1000,
+      duration: 3800,
+      delay: 1200,
       onComplete: () => {
         this.destroy;
         this.scene.start('Title');
@@ -52,8 +57,8 @@ export default class CreditsScene extends Phaser.Scene {
       targets: this.imagesTaken,
       y: -300,
       ease: 'Power1',
-      duration: 8000,
-      delay: 1000,
+      duration: 4000,
+      delay: 1100,
       onComplete: () => {
         this.destroy;
         this.scene.start('Title');

@@ -4,7 +4,7 @@ import InputTextPlugin from 'phaser3-rex-plugins/plugins/inputtext-plugin';
 export default {
   type: Phaser.WEBGL,
   parent: 'phaser-example',
-  width: 1280,
+  width: 800,
   height: 800,
   physics: {
     default: 'arcade',
