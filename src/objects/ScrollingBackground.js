@@ -8,7 +8,7 @@ export default class ScrollingBackground {
   }
 
   createLayers() {
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 5; i += 1) {
       const layer = this.scene.add.sprite(400, 400, this.key);
       layer.y = (layer.displayHeight * i);
       layer.setScale(1, 1);
@@ -22,7 +22,7 @@ export default class ScrollingBackground {
 
   update() {
     if (this.layers.getChildren()[0].y > 0) {
-      for (let i = 0; i < this.layers.getChildren().length; i++) {
+      for (let i = 0; i < this.layers.getChildren().length; i += 1) {
         const layer = this.layers.getChildren()[i];
         layer.y = (-layer.displayHeight) + (layer.displayHeight * i);
       }

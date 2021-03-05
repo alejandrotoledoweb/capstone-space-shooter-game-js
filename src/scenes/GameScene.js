@@ -130,7 +130,7 @@ export default class GameScene extends Phaser.Scene {
 
     this.allBackgrounds = ['background0', 'background1', 'background2', 'background3', 'background4', 'background5', 'background6', 'background7'];
     this.background = [];
-    for (let i = 0; i < this.allBackgrounds.length; i++) {
+    for (let i = 0; i < this.allBackgrounds.length; i += 1) {
       const bg = new ScrollingBackground(this, this.allBackgrounds[i], i * 10);
       this.background.push(bg);
     }
@@ -317,7 +317,7 @@ export default class GameScene extends Phaser.Scene {
     } else if (enemy.getData('type') === 'Lightning') {
       this.sys.game.globals.score += 4;
     }
-    this.sys.game.globals.count++;
+    this.sys.game.globals.count += 1;
     this.scoreIntervals();
 
     this.playerScore.setText(`score : ${this.sys.game.globals.score}`);
@@ -343,7 +343,7 @@ export default class GameScene extends Phaser.Scene {
 
   getEnemiesByType(type) {
     const arr = [];
-    for (let i = 0; i < this.enemies.getChildren().length; i++) {
+    for (let i = 0; i < this.enemies.getChildren().length; i += 1) {
       const enemy = this.enemies.getChildren()[i];
       if (enemy.getData('type') === type) {
         arr.push(enemy);
@@ -374,7 +374,7 @@ export default class GameScene extends Phaser.Scene {
       }
     }
 
-    for (let i = 0; i < this.enemies.getChildren().length; i++) {
+    for (let i = 0; i < this.enemies.getChildren().length; i += 1) {
       const enemy = this.enemies.getChildren()[i];
       enemy.update();
 
@@ -391,7 +391,7 @@ export default class GameScene extends Phaser.Scene {
       }
     }
 
-    for (let i = 0; i < this.enemyLasers; i++) {
+    for (let i = 0; i < this.enemyLasers; i += 1) {
       const laser = this.enemyLasers.getChildren()[i];
       laser.update();
       if (laser.x < -laser.displayWidth
@@ -404,7 +404,7 @@ export default class GameScene extends Phaser.Scene {
       }
     }
 
-    for (let i = 0; i < this.playerLasers.getChildren().length; i++) {
+    for (let i = 0; i < this.playerLasers.getChildren().length; i += 1) {
       const laser = this.playerLasers.getChildren()[i];
       if (laser.x < -laser.displayWidth
         || laser.x > this.game.config.width + laser.displayWidth
@@ -416,7 +416,7 @@ export default class GameScene extends Phaser.Scene {
       }
     }
 
-    for (let i = 0; i < this.background.length; i++) {
+    for (let i = 0; i < this.background.length; i += 1) {
       this.background[i].update();
     }
   }
