@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "For the final and Capstone Javascript project, we are tasked with creating a Phaser based game with Javascript",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "build": "webpack",
     "watch": "webpack --watch",
@@ -14,15 +15,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Rhelli/Space-Shooter---Javascript-Capstone.git"
+    "url": "git+https://github.com/alejandrotoledoweb/capstone-space-shooter-game-js.git"
   },
   "keywords": [],
   "author": "Alejandro Toledo",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Rhelli/Space-Shooter---Javascript-Capstone/issues"
+    "url": "https://github.com/alejandrotoledoweb/capstone-space-shooter-game-js/issues"
   },
-  "homepage": "https://Rhelli.github.io/Space-Shooter---Javascript-Capstone",
+  "homepage": "https://alejandrotoledoweb.github.io/capstone-space-shooter-game-js/",
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.12.1",
     "@babel/preset-env": "^7.12.1",
