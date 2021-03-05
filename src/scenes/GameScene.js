@@ -15,7 +15,7 @@ export default class GameScene extends Phaser.Scene {
   create() {
     this.model = this.sys.game.globals.model;
     if (this.model.musicOn === true && this.model.titleMusicPlaying === true) {
-      this.gameMusic = this.sound.add('gameMusic', { volume: 0.9, loop: true });
+      this.gameMusic = this.sound.add('gameMusic', { volume: 0.7, loop: true });
       this.sound.removeByKey('titleMusic');
       this.gameMusic.play();
       this.model.gameMusicPlaying = true;
@@ -142,7 +142,7 @@ export default class GameScene extends Phaser.Scene {
       'player',
     );
 
-    this.playerScore = this.add.text(16, 750, 'score : 0', {
+    this.playerScore = this.add.text(150, 750, 'score : 0', {
       fontFamily: 'Retroniod',
       fontSize: '46px',
       fontStyle: 'normal',
@@ -152,7 +152,7 @@ export default class GameScene extends Phaser.Scene {
       strokeThickness: 1,
     });
 
-    this.playerMessages = this.add.text(16, 650, '', {
+    this.playerMessages = this.add.text(150, 650, '', {
       fontFamily: 'Retro Team',
       fontSize: '38px',
       fontStyle: 'normal',
@@ -185,7 +185,7 @@ export default class GameScene extends Phaser.Scene {
               Phaser.Math.Between(0, this.game.config.width),
               0,
             );
-          } else if (Phaser.Math.Between(0, 10) >= 4) {
+          } else if (Phaser.Math.Between(0, 10) >= 2) {
             enemy = new Paranoid(
               this,
               Phaser.Math.Between(0, this.game.config.width),
@@ -254,7 +254,7 @@ export default class GameScene extends Phaser.Scene {
     const { count } = this.sys.game.globals;
     if (count === 10) {
       this.playerMessages.setText('You got 10 enemies.\nKeep it up!');
-      const captain = this.add.image(480, 480, 'starfleetCaptain');
+      const captain = this.add.image(580, 650, 'starfleetCaptain');
       captain.setScale(0.15);
       this.tweens.add({
         targets: this.fiftyScore,
@@ -272,7 +272,7 @@ export default class GameScene extends Phaser.Scene {
       });
     } else if (count === 20) {
       this.playerMessages.setText('That\'s 20 enemies!.\nGreat focused!');
-      const captain = this.add.image(480, 480, 'starfleetCaptain');
+      const captain = this.add.image(580, 650, 'starfleetCaptain');
       captain.setScale(0.15);
       this.tweens.add({
         targets: this.fiftyScore,
@@ -290,7 +290,7 @@ export default class GameScene extends Phaser.Scene {
       });
     } else if (count === 30) {
       this.playerMessages.setText('You got 30 now!!\nYou got this!');
-      const captain = this.add.image(480, 480, 'starfleetCaptain');
+      const captain = this.add.image(580, 600, 'starfleetCaptain');
       captain.setScale(0.15);
       this.tweens.add({
         targets: this.fiftyScore,
