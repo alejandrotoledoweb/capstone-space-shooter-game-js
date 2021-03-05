@@ -1,17 +1,13 @@
 @font-face {
-  font-family: 'Visitor TT2 BRK';
-  src:
-    url('Retronoid.ttf') format('ttf'),
-    url('Retronoid.otf') format('otf');
+  font-family: 'Retro Team';
+  src: url('Retro\ Team.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Visitor TT1 BRK';
-  src:
-    url('Retronoid\ Italic.ttf') format('ttf'),
-    url('Retronoid\ Italic.otf') format('otf');
+  font-family: Retroniod;
+  src: url('Retronoid.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
