@@ -56,7 +56,7 @@ export default class TitleScene extends Phaser.Scene {
     }
 
     this.backgrounds = [];
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 8; i += 1) {
       const keys = ['background0', 'background1', 'background2', 'background3', 'background4', 'background5', 'background6', 'background7'];
       const bg = new ScrollingBackground(this, keys[i], i * 3);
       this.backgrounds.push(bg);
@@ -66,7 +66,7 @@ export default class TitleScene extends Phaser.Scene {
   }
 
   update() {
-    for (let i = 0; i < this.backgrounds.length; i++) {
+    for (let i = 0; i < this.backgrounds.length; i += 1) {
       this.backgrounds[i].update();
     }
   }

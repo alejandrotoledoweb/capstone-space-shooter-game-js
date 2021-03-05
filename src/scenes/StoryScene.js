@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 import Phaser from 'phaser';
 import ButtonGen from '../objects/ButtonGen';
 import config from '../config/config';
@@ -47,6 +48,7 @@ export default class StoryScene extends Phaser.Scene {
             to: wordCount,
             ease: (v) => Phaser.Math.Easing.Stepped(v, wordCount),
             onUpdate: (_, { value }) => {
+              // eslint-disable-next-line no-undef
               text.setText(textSource2.split(' ').slice(0, value).join(' '));
             },
 
@@ -60,6 +62,7 @@ export default class StoryScene extends Phaser.Scene {
                   to: wordCount,
                   ease: (v) => Phaser.Math.Easing.Stepped(v, wordCount),
                   onUpdate: (_, { value }) => {
+                    // eslint-disable-next-line no-undef
                     text.setText(textSource3.split(' ').slice(0, value).join(' '));
                   },
                   onComplete: () => {
