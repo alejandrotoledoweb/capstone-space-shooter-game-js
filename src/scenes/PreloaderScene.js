@@ -201,12 +201,12 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.audio('explosion8', './sound/explosions/explosion08.wav');
     this.load.audio('explosion9', './sound/explosions/explosion09.wav');
 
-    this.load.audio('buttonHover', './sound/buttons/buttonHover.ogg');
-    this.load.audio('buttonSelect', './sound/buttons/buttonSelect.ogg');
-    this.load.audio('gameStart', './sound/buttons/gameStart.mp3');
+    this.load.audio('buttonHover', './sound/buttons/sfx_sounds_button5.wav');
+    this.load.audio('buttonSelect', './sound/buttons/sfx_sounds_button7.wav');
+    this.load.audio('gameStart', './sound/buttons/sfx_sounds_button5.wav');
 
     // Game Music
-    this.load.audio('titleMusic', ['./music/titleMusic.ogg']);
+    this.load.audio('titleMusic', './music/titleMusic.mp3');
     this.load.audio('gameMusic', './music/gameMusic.mp3');
   }
 
