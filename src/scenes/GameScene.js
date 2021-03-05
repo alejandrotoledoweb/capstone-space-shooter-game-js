@@ -212,7 +212,7 @@ export default class GameScene extends Phaser.Scene {
           }
 
           if (enemy !== null) {
-            enemy.setScale(Phaser.Math.Between(10, 20) * 0.1);
+            enemy.setScale(Phaser.Math.Between(10, 20) * 0.2);
             this.enemies.add(enemy);
           }
         },

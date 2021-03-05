@@ -7,9 +7,9 @@ export default class CreditsScene extends Phaser.Scene {
   }
 
   create() {
-    this.creditsText = this.add.text(0, 0, 'Credits', { fontFamily: 'Retro Team', fontSize: '32px', fill: '#31a2f2' });
-    this.createdByText = this.add.text(0, 0, 'Created By: Alejandro Toledo', { fontSize: '26px', fill: '#31a2f2' });
-    this.imagesTaken = this.add.text(0, 0, 'Images and sounds from: OpenGameArt.org', { fontSize: '26px', fill: '#31a2f2' });
+    this.creditsText = this.add.text(0, 0, 'Credits', { fontFamily: 'Retroniod', fontSize: '40px', fill: '#31a2f2' });
+    this.createdByText = this.add.text(0, 0, 'Created By: Alejandro Toledo', { fontFamily: 'Retro Team', fontSize: '32px', fill: '#31a2f2' });
+    this.imagesTaken = this.add.text(0, 0, 'Images and sounds from: OpenGameArt.org', { fontFamily: 'Retro Team', fontSize: '32px', fill: '#31a2f2' });
     this.zone = this.add.zone(config.width / 2, config.height / 2, config.width, config.height);
 
     Phaser.Display.Align.In.Center(
@@ -43,9 +43,9 @@ export default class CreditsScene extends Phaser.Scene {
 
     this.createdByTween = this.tweens.add({
       targets: this.createdByText,
-      y: -300,
+      y: -280,
       ease: 'Power1',
-      duration: 5800,
+      duration: 8800,
       delay: 1200,
       onComplete: () => {
         this.destroy;
@@ -55,9 +55,9 @@ export default class CreditsScene extends Phaser.Scene {
 
     this.createdByTween = this.tweens.add({
       targets: this.imagesTaken,
-      y: -300,
+      y: -270,
       ease: 'Power1',
-      duration: 5800,
+      duration: 8800,
       delay: 1100,
       onComplete: () => {
         this.destroy;
