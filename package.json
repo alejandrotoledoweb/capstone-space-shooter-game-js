@@ -1,7 +1,7 @@
 {
   "name": "SpaceSoldier",
   "version": "1.0.0",
-  "description": "For the final and Capstone Javascript project, we are tasked with creating a Phaser based game with Javascript",
+  "description": "A shooter game created with JavaScript and Phaser 3.",
   "main": "index.js",
   "private": true,
   "scripts": {

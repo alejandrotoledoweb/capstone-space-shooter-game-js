@@ -10,7 +10,7 @@ const initializeGame = async () => {
         Accept: 'application/json',
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ name: 'Deep Space Defence ' }),
+      body: JSON.stringify({ name: 'Space Soldier' }),
     });
     const response = await request.json();
     return response;

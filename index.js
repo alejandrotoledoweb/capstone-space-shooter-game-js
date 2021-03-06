@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import PreloaderScene from './src/scenes/PreloaderScene';
 import Model from './src/model';
 import config from './src/config/config';
 import PlayerNameScene from './src/scenes/PlayerNameScene';
@@ -8,7 +9,6 @@ import GameOverScene from './src/scenes/GameOver';
 import HighscoresScene from './src/scenes/HighscoresScene';
 import PostGameHighscoresScene from './src/scenes/PostGameHighscoresScene';
 import BootScene from './src/scenes/BootScene';
-import PreloaderScene from './src/scenes/PreloaderScene';
 import TitleScene from './src/scenes/TitleScene';
 import OptionsScene from './src/scenes/OptionsScene';
 import CreditsScene from './src/scenes/CreditsScene';
