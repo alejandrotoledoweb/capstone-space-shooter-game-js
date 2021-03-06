@@ -33,7 +33,7 @@ export default class TitleScene extends Phaser.Scene {
       this.cameras.main.fadeOut(1000, 0, 0, 0);
       this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, () => {
         this.time.delayedCall(4000, () => {
-          this.scene.start('StoryScene');
+          this.scene.start('Game');
         });
       });
     });
