@@ -59,6 +59,8 @@
     "node-fetch": "^2.6.1",
     "phaser": "^3.24.1",
     "phaser3-rex-plugins": "^1.1.31",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "regenerator-runtime": "^0.13.7",
     "webpack-cli": "^4.2.0"
   },
