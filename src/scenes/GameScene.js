@@ -15,7 +15,7 @@ export default class GameScene extends Phaser.Scene {
   create() {
     this.model = this.sys.game.globals.model;
     if (this.model.musicOn === true && this.model.titleMusicPlaying === true) {
-      this.gameMusic = this.sound.add('gameMusic', { volume: 0.7, loop: true });
+      this.gameMusic = this.sound.add('gameMusic', { volume: 0.4, loop: true });
       this.sound.removeByKey('titleMusic');
       this.gameMusic.play();
       this.model.gameMusicPlaying = true;
