@@ -11,6 +11,17 @@ The scores of each player are saved and displayed using an API services.
 I use npm and webpack to compile files and assets.
 Also, I use Jest to test the functions created in this game.
 
+## Game Controls (How to play)
+
+For how to play the game locally please go to the **Getting Started Section** or if you want to play in your browser with one single click open the link given in the **Live Demo Link Section.**
+
+Every time you enter the game for the first time, you will be asked to put your name. 
+Type your name in the line of the input and then click on the ACCEPT button down below.
+
+**To move around with the ship, use the W, A, S, D keys and to shoot at enemies using the SPACE key.**
+
+**Destroy as many enemies as possible and get the high scores ever!**
+
 ## Built With
 
 - JavaScript
@@ -26,9 +37,10 @@ Also, I use Jest to test the functions created in this game.
 - Eslint
 - Stylelint
 
-All assets as images, sounds and music from:
+All assets as images, sounds and music from OpenGameArt.org.
+You can see all the arts for this game at this link:
 
-[opengameart.org](https://opengameart.org/)
+[Project Assets](https://opengameart.org/content/space-shooter-redux)
 
 ## Live Demo - Try the game here
 
@@ -36,19 +48,19 @@ All assets as images, sounds and music from:
 
 
 
-# Getting Started
+## Getting Started
 
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and follow these simple example steps.
 
 ### Prerequisites
 
-- Local Machine installed Nodejs
+- Local Machine installed [Nodejs](https://nodejs.org/en/download/)
 - Npm as a package manager
-- A code editor as Visual Studio, Sublime,etc.
+- A code editor as [Visual Studio](https://code.visualstudio.com/download), Sublime,etc.
 
 ### Setup
 
-- Please make a locla copy of this repo typing this command on yoour terminal.
+- Please make a local copy of this repo by typing this command on your terminal.
 
 `git clone https://github.com/alejandrotoledoweb/capstone-space-shooter-game-js.git`
 
@@ -72,6 +84,10 @@ Now that you have everything installed you need to compile everything:
 Now for the usage, you just need to go to the `dist` folder inside the repo and open the `index.html` with the live server of your choice.
 
 You will see that your web browser open a tab and then the game is playable.
+
+### Alternative for using the game in a local environment
+
+After installing all the dependencies with `npm install`, you can run the command `npm run start`, with this, you will compile the code and the game will be ready to play opening the browser with this address. `http://localhost:9000`.
 
 ### Run tests
 
