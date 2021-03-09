@@ -3,4 +3,5 @@ node_modules/
 .stylintrc.json
 
 # Local Netlify folder
-.netlify
+.netlifydist/
+dist/
