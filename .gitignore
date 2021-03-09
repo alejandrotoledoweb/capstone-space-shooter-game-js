@@ -4,4 +4,3 @@ node_modules/
 
 # Local Netlify folder
 .netlifydist/
-dist/
