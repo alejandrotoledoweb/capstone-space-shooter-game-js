@@ -9,6 +9,10 @@ export default class PlayerNameScene extends Phaser.Scene {
   preload() {
     this.cameras.main.fadeIn(1000, 0, 0, 0);
     this.load.plugin('rexinputtextplugin', 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/dist/rexinputtextplugin.min.js', true);
+    this.load.audio('buttonHover', './Sound/Buttons/sfx_sounds_button5.wav');
+    this.load.audio('buttonSelect', './Sound/Buttons/sfx_sounds_button7.wav');
+    // this.load.image('confirmButton', './Buttons/confirmButton.png');
+    // this.load.image('confirmButtonFocus', './Buttons/confirmButtonFocus.png');
   }
 
   create() {

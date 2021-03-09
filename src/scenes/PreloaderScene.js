@@ -73,63 +73,63 @@ export default class PreloaderScene extends Phaser.Scene {
     this.timedEvent = this.time.delayedCall(4000, this.ready, [], this);
 
     this.load.crossOrigin = 'Anonymous';
-    this.load.image('titleScreen', './logos/dsdLogo.png');
-    this.load.image('playButton', './buttons/playButton.png');
-    this.load.image('playButtonFocus', './buttons/playButtonFocus.png');
-    this.load.image('optionsButton', './buttons/optionsButton.png');
-    this.load.image('optionsButtonFocus', './buttons/optionsButtonFocus.png');
-    this.load.image('creditsButton', './buttons/creditsButton.png');
-    this.load.image('creditsButtonFocus', './buttons/creditsButtonFocus.png');
-    this.load.image('checkbox', './buttons/checkbox.png');
-    this.load.image('checkboxChecked', './buttons/checkboxChecked.png');
-    this.load.image('menuButton', './buttons/menuButton.png');
-    this.load.image('menuButtonFocus', './buttons/menuButtonFocus.png');
-    this.load.image('gameOverTitle', './logos/gameOver.png');
-    this.load.image('restartButton', './buttons/restartButton.png');
-    this.load.image('restartButtonFocus', './buttons/restartButtonFocus.png');
-    this.load.image('skipButton', './buttons/skipButton.png');
-    this.load.image('skipButtonFocus', './buttons/skipButtonFocus.png');
-    this.load.image('confirmButton', './buttons/confirmButton.png');
-    this.load.image('confirmButtonFocus', './buttons/confirmButtonFocus.png');
-    this.load.image('nextButton', './buttons/nextButton.png');
-    this.load.image('nextButtonFocus', './buttons/nextButtonFocus.png');
-    this.load.image('highscoresButton', './buttons/highscoresButton.png');
-    this.load.image('highscoresButtonFocus', './buttons/highscoresButtonFocus.png');
-    this.load.image('mainMenuButton', './buttons/mainMenuButton.png');
-    this.load.image('mainMenuButtonFocus', './buttons/mainMenuButtonFocus.png');
+    this.load.image('titleScreen', './Logos/dsdLogo.png');
+    this.load.image('playButton', './Buttons/playButton.png');
+    this.load.image('playButtonFocus', './Buttons/playButtonFocus.png');
+    this.load.image('optionsButton', './Buttons/optionsButton.png');
+    this.load.image('optionsButtonFocus', './Buttons/optionsButtonFocus.png');
+    this.load.image('creditsButton', './Buttons/creditsButton.png');
+    this.load.image('creditsButtonFocus', './Buttons/creditsButtonFocus.png');
+    this.load.image('checkbox', './Buttons/checkbox.png');
+    this.load.image('checkboxChecked', './Buttons/checkboxChecked.png');
+    this.load.image('menuButton', './Buttons/menuButton.png');
+    this.load.image('menuButtonFocus', './Buttons/menuButtonFocus.png');
+    this.load.image('gameOverTitle', './Logos/gameOver.png');
+    this.load.image('restartButton', './Buttons/restartButton.png');
+    this.load.image('restartButtonFocus', './Buttons/restartButtonFocus.png');
+    this.load.image('skipButton', './Buttons/skipButton.png');
+    this.load.image('skipButtonFocus', './Buttons/skipButtonFocus.png');
+    this.load.image('confirmButton', './Buttons/confirmButton.png');
+    this.load.image('confirmButtonFocus', './Buttons/confirmButtonFocus.png');
+    this.load.image('nextButton', './Buttons/nextButton.png');
+    this.load.image('nextButtonFocus', './Buttons/nextButtonFocus.png');
+    this.load.image('highscoresButton', './Buttons/highscoresButton.png');
+    this.load.image('highscoresButtonFocus', './Buttons/highscoresButtonFocus.png');
+    this.load.image('mainMenuButton', './Buttons/mainMenuButton.png');
+    this.load.image('mainMenuButtonFocus', './Buttons/mainMenuButtonFocus.png');
 
     // GAME SCENE ASSETS
-    this.load.image('background0', './backgrounds/bkgd_0.png');
-    this.load.image('background1', './backgrounds/bkgd_1.png');
-    this.load.image('background2', './backgrounds/bkgd_2.png');
-    this.load.image('background3', './backgrounds/bkgd_3.png');
-    this.load.image('background4', './backgrounds/bkgd_4.png');
-    this.load.image('background5', './backgrounds/bkgd_5.png');
-    this.load.image('background6', './backgrounds/bkgd_6.png');
-    this.load.image('background7', './backgrounds/bkgd_7.png');
+    this.load.image('background0', './Backgrounds/bkgd_0.png');
+    this.load.image('background1', './Backgrounds/bkgd_1.png');
+    this.load.image('background2', './Backgrounds/bkgd_2.png');
+    this.load.image('background3', './Backgrounds/bkgd_3.png');
+    this.load.image('background4', './Backgrounds/bkgd_4.png');
+    this.load.image('background5', './Backgrounds/bkgd_5.png');
+    this.load.image('background6', './Backgrounds/bkgd_6.png');
+    this.load.image('background7', './Backgrounds/bkgd_7.png');
 
     // Explosion spritesheets
-    this.load.spritesheet('explosion1', './explosions/explosion1.png', {
+    this.load.spritesheet('explosion1', './Explosions/explosion1.png', {
       frameWidth: 96,
       frameHeight: 96,
     });
-    this.load.spritesheet('explosion2', './explosions/explosion2.png', {
+    this.load.spritesheet('explosion2', './Explosions/explosion2.png', {
       frameWidth: 32,
       frameHeight: 32,
     });
-    this.load.spritesheet('explosion3', './explosions/explosion3.png', {
+    this.load.spritesheet('explosion3', './Explosions/explosion3.png', {
       frameWidth: 128,
       frameHeight: 128,
     });
-    this.load.spritesheet('explosion4', './explosions/explosion4.png', {
+    this.load.spritesheet('explosion4', './Explosions/explosion4.png', {
       frameWidth: 256,
       frameHeight: 256,
     });
-    this.load.spritesheet('explosion5', './explosions/explosion5.png', {
+    this.load.spritesheet('explosion5', './Explosions/explosion5.png', {
       frameWidth: 256,
       frameHeight: 256,
     });
-    this.load.spritesheet('explosion6', './explosions/explosion6.png', {
+    this.load.spritesheet('explosion6', './Explosions/explosion6.png', {
       frameWidth: 256,
       frameHeight: 256,
     });
@@ -139,7 +139,7 @@ export default class PreloaderScene extends Phaser.Scene {
 
     // Enemy Ships & Lasers
     // Ninja Ship
-    this.load.spritesheet('ninja', './ships/Ninja.png', {
+    this.load.spritesheet('ninja', './Ships/Ninja.png', {
       frameWidth: 32,
       frameHeight: 32,
     });
@@ -147,7 +147,7 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('ninjaLaser1', './lasers/blue/1.png');
 
     // UFO Ship
-    this.load.spritesheet('ufo', './ships/UFO.png', {
+    this.load.spritesheet('ufo', './Ships/UFO.png', {
       frameWidth: 32,
       frameHeight: 32,
     });
@@ -155,7 +155,7 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('ufoLasers1', './lasers/red/1.png');
 
     // Paranoid Ship
-    this.load.spritesheet('paranoid', './ships/Paranoid.png', {
+    this.load.spritesheet('paranoid', './Ships/Paranoid.png', {
       frameWidth: 32,
       frameHeight: 32,
     });
@@ -163,7 +163,7 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('paranoidLasers5', './lasers/green/5.png');
 
     // Saboteur Ship
-    this.load.spritesheet('saboteur', './ships/Saboteur.png', {
+    this.load.spritesheet('saboteur', './Ships/Saboteur.png', {
       frameWidth: 32,
       frameHeight: 32,
     });
@@ -171,7 +171,7 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('saboteurLasers4', './lasers/pink/4.png');
 
     // Lightning Ship
-    this.load.spritesheet('lightning', './ships/Lightning.png', {
+    this.load.spritesheet('lightning', './Ships/Lightning.png', {
       frameWidth: 32,
       frameHeight: 32,
     });
@@ -179,7 +179,7 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('lightningLasers5', './lasers/yellow/5.png');
 
     // Player Ship
-    this.load.spritesheet('player', './ships/Lighter.png', {
+    this.load.spritesheet('player', './Ships/Lighter.png', {
       frameWidth: 50,
       frameHeight: 50,
     });
@@ -188,27 +188,27 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('playerLaser3', './lasers/turq/3.png');
 
     // SFX
-    this.load.audio('laser2', './sound/lasers/sfx_wpn_laser3.wav');
-    this.load.audio('laser4', './sound/lasers/sfx_wpn_laser5.wav');
-    this.load.audio('laser7', './sound/lasers/sfx_wpn_laser11.wav');
+    this.load.audio('laser2', './Sound/lasers/sfx_wpn_laser3.wav');
+    this.load.audio('laser4', './Sound/lasers/sfx_wpn_laser5.wav');
+    this.load.audio('laser7', './Sound/lasers/sfx_wpn_laser11.wav');
 
-    this.load.audio('explosion1', './sound/explosions/explosion01.wav');
-    this.load.audio('explosion2', './sound/explosions/explosion02.wav');
-    this.load.audio('explosion3', './sound/explosions/explosion03.wav');
-    this.load.audio('explosion4', './sound/explosions/explosion04.wav');
-    this.load.audio('explosion5', './sound/explosions/explosion05.wav');
-    this.load.audio('explosion6', './sound/explosions/explosion06.wav');
-    this.load.audio('explosion7', './sound/explosions/explosion07.wav');
-    this.load.audio('explosion8', './sound/explosions/explosion08.wav');
-    this.load.audio('explosion9', './sound/explosions/explosion09.wav');
+    this.load.audio('explosion1', './Sound/Explosions/explosion01.wav');
+    this.load.audio('explosion2', './Sound/Explosions/explosion02.wav');
+    this.load.audio('explosion3', './Sound/Explosions/explosion03.wav');
+    this.load.audio('explosion4', './Sound/Explosions/explosion04.wav');
+    this.load.audio('explosion5', './Sound/Explosions/explosion05.wav');
+    this.load.audio('explosion6', './Sound/Explosions/explosion06.wav');
+    this.load.audio('explosion7', './Sound/Explosions/explosion07.wav');
+    this.load.audio('explosion8', './Sound/Explosions/explosion08.wav');
+    this.load.audio('explosion9', './Sound/Explosions/explosion09.wav');
 
-    this.load.audio('buttonHover', './sound/buttons/sfx_sounds_button5.wav');
-    this.load.audio('buttonSelect', './sound/buttons/sfx_sounds_button7.wav');
-    this.load.audio('gameStart', './sound/buttons/sfx_sounds_button5.wav');
+    this.load.audio('buttonHover', './Sound/Buttons/sfx_sounds_button5.wav');
+    this.load.audio('buttonSelect', './Sound/Buttons/sfx_sounds_button7.wav');
+    this.load.audio('gameStart', './Sound/Buttons/sfx_sounds_button5.wav');
 
     // Game Music
-    this.load.audio('titleMusic', './music/titleMusic.mp3');
-    this.load.audio('gameMusic', './music/gameMusic.mp3');
+    this.load.audio('titleMusic', './Music/titleMusic.mp3');
+    this.load.audio('gameMusic', './Music/gameMusic.mp3');
   }
 
   init() {
