@@ -1,5 +1,5 @@
 {
-  "name": "SpaceSoldier",
+  "name": "SpaceSoldiers",
   "version": "1.0.0",
   "description": "A shooter game created with JavaScript and Phaser 3.",
   "main": "index.js",
