@@ -30,7 +30,7 @@ export default class GameOverScene extends Phaser.Scene {
     // Add background music
     this.model = this.sys.game.globals.model;
     if (this.model.musicOn === true && this.model.titleMusicPlaying === false) {
-      this.titleMusic = this.sound.add('titleMusic', { volume: 0.5, loop: true });
+      this.titleMusic = this.sound.add('titleMusic', { volume: 0.2, loop: true });
       this.titleMusic.play();
       this.model.titleMusicPlaying = true;
       this.sys.game.globals.titleMusic = this.titleMusic;

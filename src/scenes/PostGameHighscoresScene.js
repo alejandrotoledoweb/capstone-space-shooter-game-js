@@ -12,11 +12,11 @@ export default class PostGameHighscoresScene extends Phaser.Scene {
 
   create() {
     this.playerSettings = {
-      pilotName: this.sys.game.globals.pilotName,
+      soldierName: this.sys.game.globals.soldierName,
       score: this.sys.game.globals.score,
     };
 
-    this.highscore = this.add.text(config.width / 2, 100, `${this.playerSettings.pilotName}\nFinal Score: ${this.playerSettings.score}`, {
+    this.highscore = this.add.text(config.width / 2, 100, `${this.playerSettings.soldierName}\nFinal Score: ${this.playerSettings.score}`, {
       fontFamily: 'Retro Team',
       fontSize: '56px',
       color: '#31a2f2',
@@ -25,7 +25,7 @@ export default class PostGameHighscoresScene extends Phaser.Scene {
       border: '4px solid #9d9d9d',
     }).setOrigin(0.5, 0.5);
 
-    postHighscores(this.playerSettings.pilotName, this.playerSettings.score).then(response => {
+    postHighscores(this.playerSettings.soldierName, this.playerSettings.score).then(response => {
       if (response.result !== undefined) {
         this.messages = this.add.text(16, 16, `${response.result}`, {
           fontFamily: 'Retroniod',
@@ -65,8 +65,8 @@ export default class PostGameHighscoresScene extends Phaser.Scene {
     });
 
     this.sfx = {
-      btnHover: this.sound.add('buttonHover', { volume: 0.5 }),
-      btnSelect: this.sound.add('buttonSelect', { volume: 0.5 }),
+      btnHover: this.sound.add('buttonHover', { volume: 0.3 }),
+      btnSelect: this.sound.add('buttonSelect', { volume: 0.3 }),
     };
 
     this.nextButton = new ButtonGen(this, config.width / 2, config.height / 2 + 300, 'nextButton', 'nextButtonFocus', 'GameOver', this.sfx.btnHover, this.sfx.btnSelect);

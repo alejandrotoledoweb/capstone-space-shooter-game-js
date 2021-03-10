@@ -19,7 +19,7 @@ const initializeGame = async () => {
   }
 };
 
-const postHighscores = async (pilotName, score) => {
+const postHighscores = async (SoldierName, score) => {
   try {
     const request = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/QNx4z7IBfVVINUGksTiq/scores/', {
       method: 'POST',
@@ -27,7 +27,7 @@ const postHighscores = async (pilotName, score) => {
         Accept: 'application/json',
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ user: pilotName, score }),
+      body: JSON.stringify({ user: SoldierName, score }),
     });
     const response = await request.json();
     return response;

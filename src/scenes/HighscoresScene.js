@@ -17,7 +17,7 @@ export default class HighscoresScene extends Phaser.Scene {
       response.sort((a, b) => b[1] - a[1])
         .slice(0, 6)
         .map((game, i) => {
-          const text = `${i + 1}. Pilot: ${game[0]} --- Score: ${game[1]}`;
+          const text = `${i + 1}. Soldier: ${game[0]} --- Score: ${game[1]}`;
           this.add.text(config.width / 2, (85 * (i + 1.1)) + 100, text, {
             fontFamily: 'Retroniod',
             fontSize: '48px',
@@ -30,8 +30,8 @@ export default class HighscoresScene extends Phaser.Scene {
     });
 
     this.sfx = {
-      btnHover: this.sound.add('buttonHover', { volume: 0.5 }),
-      btnSelect: this.sound.add('buttonSelect', { volume: 0.5 }),
+      btnHover: this.sound.add('buttonHover', { volume: 0.2 }),
+      btnSelect: this.sound.add('buttonSelect', { volume: 0.2 }),
     };
 
     this.mainMenuButton = new ButtonGen(this, config.width / 2, config.height / 2 + 300, 'mainMenuButton', 'mainMenuButtonFocus', 'Title', this.sfx.btnHover, this.sfx.btnSelect);
