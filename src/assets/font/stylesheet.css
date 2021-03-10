@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Retro Team';
+  src: url('Retro\ Team.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Retroniod;
+  src: url('Retronoid.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}

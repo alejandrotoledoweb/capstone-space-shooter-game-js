@@ -1,0 +1,6 @@
+node_modules/
+.eslintc.json
+.stylintrc.json
+
+# Local Netlify folder
+.netlifydist/
