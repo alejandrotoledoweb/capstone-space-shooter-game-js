@@ -2,7 +2,7 @@
 
 # Capstone-space-shooter-game-js
 
-I built this game as part of the Final Project of Full-Stack Developer at Microverse School. This is a full JavaScript app about a space shooter game.
+I built this game as part of the Final Project for JavaScript Section at Full-Stack Developer Programm at Microverse School. This is a full JavaScript app about a space shooter game.
 I implemented this game using Phaser 3 as the main dependency for the game.
 The scores of each player are saved and displayed using an API services.
 
